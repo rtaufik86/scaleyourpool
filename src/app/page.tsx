@@ -487,7 +487,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Founding Builder Program
             </h2>
-            <p className="text-slate-400">Limited to 3 Elite Pool Builders Only</p>
+            <p className="text-slate-400">Limited to 5 Elite Pool Builders Only</p>
           </div>
 
           {/* Countdown Timer */}
