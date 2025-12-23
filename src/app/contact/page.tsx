@@ -106,7 +106,7 @@ export default function ContactPage() {
                         <div>
                             <h3 className="font-semibold text-white mb-2">How much does it cost?</h3>
                             <p className="text-slate-400 text-sm mb-3">
-                                $2,997 setup fee + $197/month. Includes 30-day money-back guarantee.
+                                $2,997 setup fee + $247/month. Includes 30-day money-back guarantee.
                             </p>
                             <Link href="/#pricing" className="text-orange-500 hover:text-orange-400 text-sm font-medium">
                                 View Pricing →

@@ -56,7 +56,7 @@ export default function TermsPage() {
                                 <h3 className="text-lg font-semibold text-white mb-2">Pricing</h3>
                                 <ul className="list-disc list-inside space-y-2">
                                     <li><strong>Setup Fee:</strong> $2,997 (one-time)</li>
-                                    <li><strong>Monthly Subscription:</strong> $197/month</li>
+                                    <li><strong>Monthly Subscription:</strong> $247/month</li>
                                     <li><strong>Limited Availability:</strong> Only 3 pool builders accepted</li>
                                 </ul>
                             </div>

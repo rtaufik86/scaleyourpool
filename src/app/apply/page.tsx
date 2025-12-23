@@ -154,7 +154,7 @@ export default function ApplyPage() {
                                     </li>
                                     <li className="flex items-start gap-2 text-slate-400">
                                         <CheckCircle size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
-                                        <span><strong className="text-white">$197/mo</strong> locked forever</span>
+                                        <span><strong className="text-white">$247/mo</strong> locked forever</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-slate-400">
                                         <CheckCircle size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
@@ -194,7 +194,7 @@ export default function ApplyPage() {
 
                             <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-xl p-5">
                                 <p className="text-center text-sm">
-                                    <span className="text-white font-bold">⏰ Only 3 Spots</span>
+                                    <span className="text-white font-bold">⏰ Only 5 Spots</span>
                                     <br />
                                     <span className="text-slate-400">Applications reviewed on first-come, first-served basis</span>
                                 </p>

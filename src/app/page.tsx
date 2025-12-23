@@ -19,7 +19,7 @@ export default function Home() {
             <img src="/logo.png" alt="Scale Your Pool" className="h-16 w-auto object-contain" />
           </Link>
           <div className="hidden md:flex items-center gap-2 text-orange-500 font-medium text-sm">
-            🚀 <span className="text-white">Founding Builder Program:</span> Only 3 Spots Remaining
+            🚀 <span className="text-white">Founding Builder Program:</span> Only 5 Spots Remaining
           </div>
           <button
             onClick={() => {
@@ -510,12 +510,12 @@ export default function Home() {
                 </div>
                 <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
                   <p className="text-slate-400 text-sm uppercase tracking-wide">Monthly</p>
-                  <p className="text-4xl font-bold text-orange-500 my-2">$197<span className="text-lg text-slate-400">/mo</span></p>
+                  <p className="text-4xl font-bold text-orange-500 my-2">$247<span className="text-lg text-slate-400">/mo</span></p>
                   <p className="text-slate-500 text-sm">Regular: $497/mo — <span className="text-green-500 font-semibold">Locked Forever</span></p>
                 </div>
               </div>
               <div className="bg-slate-800/50 rounded-xl p-4 text-center mb-8 border border-slate-700">
-                <p className="text-white">Total Year 1: <span className="text-orange-500 font-bold text-xl">$5,361</span></p>
+                <p className="text-white">Total Year 1: <span className="text-orange-500 font-bold text-xl">$5,961</span></p>
                 <p className="text-green-500 text-sm">vs $12,961 regular pricing</p>
               </div>
 
@@ -530,7 +530,7 @@ export default function Home() {
                       'CRM integration',
                       'Weekly optimization calls (Month 1-3)',
                       'Direct access to AI engineers',
-                      'Lifetime founding rate ($197 forever)',
+                      'Lifetime founding rate ($247 forever)',
                       '30-day money-back guarantee',
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-slate-400 text-sm">
@@ -560,7 +560,7 @@ export default function Home() {
               {/* CTA */}
               <div className="text-center">
                 <div className="inline-block bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
-                  ⏰ Spots Remaining: 3
+                  ⏰ Spots Remaining: 5
                 </div>
                 <br />
                 <Link href="/apply" className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-orange-500/25 transition-all inline-flex items-center gap-3">
