@@ -127,6 +127,22 @@ export async function POST(request: NextRequest) {
 
         const supabase = await createServerClient();
 
+        // 🏢 Organization Routing Logic
+        let organizationId = await getOrganizationId(supabase);
+
+        // Fallback for demo page if no org detected
+        if (!organizationId && source === 'ai_chat_widget') {
+            // Check referer to see if it's the demo page
+            const referer = request.headers.get('referer') || '';
+            if (referer.includes('/demo')) {
+                // Paradise Pool Org ID
+                organizationId = '4411e5e9-82a2-4968-8304-596431250c2d';
+            } else if (referer.includes('scaleyourpool.com')) {
+                // Main Scale Your Pool Org ID (if exists)
+                organizationId = '00000000-0000-0000-0000-000000000001';
+            }
+        }
+
         // Calculate Project Value for Auto-Assignment
         const projectValue = parseBudget(budget);
 
@@ -136,7 +152,7 @@ export async function POST(request: NextRequest) {
             email,
             budget,
             project_value: projectValue,
-            utm_source: 'ai_chat_widget' // Or get from request body if available
+            utm_source: utm_source || source || 'ai_chat_widget'
         });
 
         // Insert lead into database with scoring data
@@ -149,19 +165,16 @@ export async function POST(request: NextRequest) {
                 budget,
                 project_type: projectType,
                 timeline,
-                // notes,  // Column doesn't exist
-                // conversation_log: conversationLog, // Column doesn't exist
                 utm_source: utm_source || source || 'ai_chat_widget',
                 utm_campaign: utm_campaign || null,
                 lead_status: 'new',
+                organization_id: organizationId,
                 // Lead scoring fields
                 lead_score: leadAnalysis.score,
                 assigned_to: assignedTo,
                 project_value: projectValue,
                 urgency_level: leadAnalysis.urgency,
                 score_confidence: leadAnalysis.confidence,
-                // intent_signals: leadAnalysis.signals, // Column doesn't exist
-                // scoring_reasoning: leadAnalysis.reasoning, // Column doesn't exist
                 recommended_action: leadAnalysis.recommendedAction,
                 created_at: new Date().toISOString(),
                 // Session tracking for returning visitors
